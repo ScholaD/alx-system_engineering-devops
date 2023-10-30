@@ -1,0 +1,36 @@
+https://i.imgur.io/ns4pnnE_d.webp?maxwidth=640&shape=thumb&fidelity=medium
+
+What is Server:
+Its a powerful computer that provides service and resources to the other computer often refered to as client
+
+Role of Domain Name:
+its role is to provide a human friendly way to access website and online services to the internet. It serves as a unique identifier for websites, plays a crucial role in branding and user navigation, and is used in email addressing. Domain names enable users to find and trust websites, organize online resources, and ensure global accessibility, all while helping route internet traffic to the correct web servers.
+
+
+What type of DNS record www is in www.foobar.com:
+
+Its Assocated with A or CNAME DNS record
+
+
+What is the role of the web server:
+It servrs web content to the user over the internet
+
+What is the role of the application server:
+Its a special software that is like the brain and muscles behind your apps and website
+
+
+What is the role of the database
+Managing amd Organizing data in various applications and systems.
+
+
+What is the server using to communicate with the computer of the user requesting the website:
+HTTP/ HTTPS
+
+There are multiple SPOF (Single Point Of Failure) in this infrastructure.
+For example, if the MySQL database server is down, the entire site would be down.
+
+Downtime when maintenance needed.
+When we need to run some maintenance checks on any component, they have to be put down or the server has to be turned off. Since there's only one server, the website would be experiencing a downtime.
+
+Cannot scale if there's too much incoming traffic.
+It would be hard to scale this infrastructure becauses one server contains the required components. The server can quickly run out of resources or slow down when it starts receiving a lot of requests.

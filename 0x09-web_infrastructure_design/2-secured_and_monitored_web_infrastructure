@@ -1,0 +1,33 @@
+https://i.imgur.io/hENFmuu_d.webp?maxwidth=640&shape=thumb&fidelity=medium
+
+
+Firewalls serve as a critical component of network security and are used to protect computer networks from unauthorized access, cyberattacks, and other security threats
+
+In the context of the infrastructure design, using HTTPS is a fundamental security measure to protect the integrity and confidentiality of user data and ensure the authenticity of the website. It aligns with best practices for web security and privacy.
+
+What monitoring is used for
+Monitoring is used to track and oversee the performance, security, and health of systems, networks, and applications
+
+How the monitoring tool is collecting data
+Monitoring tools collect data from systems, networks, and applications through various methods such as agent-based and agentless monitoring, SNMP for network devices, log collection, API integration, flow data analysis, remote probing, custom scripts, packet capture, syslog collection, and performance counters
+
+Explain what to do if you want to monitor your web server QPS
+
+To monitor your web server's Queries Per Second (QPS):
+
+Choose a monitoring tool that supports web server monitoring.
+Install and configure the monitoring tool to gather data from your web server.
+Set up a metric or query to measure QPS specifically.
+Integrate monitoring agents or modules into your web server software.
+Configure alarms and alerts to be notified of abnormal QPS values.
+Visualize the QPS data through charts and graphs on the monitoring tool's dashboard.
+Analyze QPS data to detect trends and anomalies.
+Respond by scaling resources or optimizing performance as needed.
+Monitor other relevant metrics like response times and resource utilization.
+Regularly review and adjust your monitoring setup to adapt to changing requirements. Monitoring QPS provides insights into web traffic volume and helps in making informed decisions for web server optimization and scaling.
+
+ISSUES WITH THE INFRASTUCTURE
+
+Terminating SSL at the load balancer level would leave the traffic between the load balancer and the web servers unencrypted.
+Having one MySQL server is an issue because it is not scalable and can act as a single point of failure for the web infrastructure.
+Having servers with all the same components would make the components contend for resources on the server like CPU, Memory, I/O, etc., which can lead to poor performance and also make it difficult to locate the source of the problem. A setup such as this is not easily scalable.
