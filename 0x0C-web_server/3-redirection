@@ -1,24 +1,18 @@
 #!/usr/bin/env bash
-
 # Installs nginx web server
+
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 80
 sudo ufw reload
-
-# Set up a basic "Hello World!" page
 echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
-
-# Configure Nginx for redirection
 echo "server {
     listen 80;
     listen [::]:80 default_server;
     root   /etc/nginx/html;
     index  index.html;
     location /redirect_me {
-        return 301 https://youtube.com/@Didizworldd?si=3-DUiQasXfnnkIqK;
+    return 301 https://youtube.com/@Didizworldd?si=3-DUiQasXfnnkIqK;
     }
-}" | sudo tee /etc/nginx/sites-available/default > /dev/null
-
-# Restart Nginx to apply changes
-sudo service nginx restart
+}" > /etc/nginx/sites-available/default
+service nginx restart
